@@ -1,0 +1,25 @@
+.button {  
+font-size: 24px;
+text-align: center;
+cursor: pointer;
+outline: none;
+color: #fff;
+background-color: #1C9AEC;
+border: none;
+border-radius: 15px;
+box-shadow: 0 9px #999;
+height: 180px;
+width: 400px;
+}
+
+.button:hover {background-color: #0866A3}
+
+.button:active {
+background-color: #F53623;
+box-shadow: 0 9px #666;
+transform: translateY(4px);
+}
+
+#tdpadding{
+    padding: 5px
+}

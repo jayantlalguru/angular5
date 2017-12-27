@@ -1,0 +1,31 @@
+<style >
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;        
+    }
+    
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }   
+</style>
+<div>
+<div style="color:rgba(255, 0, 0, 0.74); font-weight: bold" *ngIf="gridData.length > 0">Displaying records for {{header}}</div>
+<table>        
+    <tr style="background-color: #264051; color: #dddddd" *ngIf="gridData.length > 0">
+            <th *ngFor="let columName of gridColumns">{{columName}}</th>
+            <th>Select To Update</th>
+    </tr>
+    <tr *ngFor="let columnObject of gridData">                
+        <td *ngFor="let columName of gridColumns">{{columnObject[columName]}}</td>
+        <td><a [routerLink]="" (click)="Select(columnObject)">Select</a></td>              
+    </tr>
+</table>
+
+</div>

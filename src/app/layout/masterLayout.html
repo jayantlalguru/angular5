@@ -1,0 +1,24 @@
+<html>
+        <head>
+            </head>
+            <body>   
+                             
+                <div id="header"><h1>Welcome to assignment app</h1></div>
+                <div id="sidebar-left">                    
+                    <button [routerLink]="['Home']" class="buttonMenu"><span>Home</span></button>
+                    <button [routerLink]="['Twoway']" class="buttonMenu"><span>Two Way</span></button>
+                    <button [routerLink]="['Customer']" class="buttonMenu"><span>Customer</span></button>
+                    <button [routerLink]="['Sharing']" class="buttonMenu"><span>Sharing</span></button>
+                    <button [routerLink]="['Attribute']" class="buttonMenu"><span>Attribute</span></button>
+                    <button [routerLink]="['Structural']" class="buttonMenu"><span>Structural</span></button>
+                    <button [routerLink]="['Todo']" class="buttonMenu"><span>Todo</span></button>
+                </div>
+                <div id="main">
+                    <button class="button" (click)="Navigate()"><span>Back </span></button>
+                    <button class="button" [routerLink]="['Home']"><span>Home </span></button>
+                    <router-outlet></router-outlet>
+                    <div id="footer"><br>Copyright &copy; 2017-2018 assignment.com</div>
+                </div>        
+                
+            </body>
+        </html>

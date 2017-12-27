@@ -1,0 +1,30 @@
+<div style="width: 83%; float: right">        
+        <h1 style="color:#EE5647">Create/Update Customer</h1>
+    <table>        
+        <tr>
+            <td>Customer Name: </td>
+            <td>
+                <input type="text" name="customerName" placeholder="Customer Name" [(ngModel)]="currentCustomer.customerName" ><br>
+            </td>
+        </tr>
+        <tr>
+            <td>Customer Code: </td>
+            <td>
+                <input type="text" name="customerCode" placeholder="Customer Code" [(ngModel)]="currentCustomer.customerCode" ><br>
+            </td>
+        </tr>
+        <tr>
+            <td>Customer Amount: </td>
+            <td>
+                <input type="text" name="customerAmount" placeholder="Customer Amount" [(ngModel)]="currentCustomer.customerAmount" >
+            </td>
+        </tr>
+    </table>  
+    <div>
+        <input type="submit" (click)="Add()" value="Add Customer">
+        <input type="submit" (click)="Update()" value="Update Customer">
+        <input type="submit" (click)="Cancel()" value="Cancel">
+        <grid-display [grid-data]="customers" [grid-header]="'Customer. Total Records: ' + customers.length" (grid-selected)="Select($event)"></grid-display>
+    </div>
+    
+</div>
